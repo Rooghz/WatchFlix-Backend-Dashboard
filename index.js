@@ -23,9 +23,36 @@ mongoose
     });
 
 // Routes
-
 app.get('/', (req, res) => {
-    res.send('Welcome to the WatchFlix API');
+    res.send(`
+      <html>
+        <head>
+          <style>
+            /* CSS styles */
+            body {
+              background-color: black;
+              color: lime;
+              margin: 0;
+              padding: 0;
+            }
+  
+            .terminal {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              height: 80vh;
+              font-family: monospace;
+              font-size: 24px;
+            }
+          </style>
+        </head>
+        <body>
+          <div class="terminal">
+            Welcome to the WatchFlix API
+          </div>
+        </body>
+      </html>
+    `);
 });
 
 
